@@ -22,6 +22,5 @@
   "manifest_version": 2,
   "name": "Reload Images",
   "permissions": ["contextMenus"],
-  "update_url": "https://extension-updates.opera.com/api/omaha/update/",
   "version": "2.5.2"
 }
