@@ -1,13 +1,13 @@
 {
   "background": {
-    "persistent": true,
-    "scripts": ["js/background.js"]
+    "service_worker": "js/background.js",
+    "type": "module"
   },
   "content_scripts": [
     {
-      "run_at": "document_start",
       "js": ["js/myscript.js"],
-      "matches": ["<all_urls>"]
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
     }
   ],
   "description": "Reload images in Tab/Window using context menu.",
@@ -19,8 +19,8 @@
   "icons": {
     "128": "img/128.png"
   },
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Reload Images",
   "permissions": ["contextMenus"],
-  "version": "2.5.2"
+  "version": "3.0.0"
 }
